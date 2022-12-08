@@ -14,13 +14,17 @@ public class PrincipalImplementation implements PrincipalInterface {
     public Student admitAStudent(Applicant applicant) {
         Student student = null; 
         Random random = new Random();
-       if (applicant.getAge() >= 18 ){
-           student = new Student(applicant.getName(), random.nextInt(), LocalDate.now().getYear());
-           Principal.students.add(student);
-           System.out.println(applicant.getName() + " has been Admitted to the school");
-       }else {
-           System.out.println("Sorry UnderAge!!!!");
-       }
+      if (!checkApplicantEmail(applicant.getEmail())){
+          if (applicant.getAge() >= 18 ){
+              student = new Student(applicant.getName(), random.nextInt(), applicant.getEmail(), LocalDate.now().getYear());
+              Principal.students.add(student);
+              System.out.println(applicant.getName() + " has been Admitted to the school");
+          }else {
+              System.out.println("Sorry UnderAge!!!!");
+          }
+      }else {
+          System.out.println("This student already exist.");
+      }
        
        return  student;
     }
@@ -43,5 +47,14 @@ public class PrincipalImplementation implements PrincipalInterface {
         }
         return  -1;
     }
+    private boolean checkApplicantEmail(String applicantEmail){
+        for(Student student : Principal.students){
+            if(student.getEmail().equalsIgnoreCase(applicantEmail)){
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 }

@@ -1,4 +1,4 @@
 package enumeration;
 
-public class Level {
+public enum Level {
 }

@@ -7,24 +7,29 @@ public abstract class Base {
     private double age;
     private int yearOfBirth;
 
+    private String email;
+
     public Base(String name){
         this.name = name;
     }
+
     public Base(String name, int identityNum){
         this.name = name;
         this.identityNum = identityNum;
     }
 
-    public Base(String name, double age, int yearOfBirth){
+    public Base(String name, double age,String email, int yearOfBirth){
         this.name = name;
         this.age = age;
+        this.email = email;
         this.yearOfBirth = yearOfBirth;
     }
 
-    public Base(String name, int identityNum, int dateJoined) {
+    public Base(String name, int identityNum, String email, int dateJoined) {
         this.name = name;
         this.identityNum = identityNum;
         this.dateJoined = dateJoined;
+        this.email = email;
     }
 
     public  String getName() {
@@ -59,6 +64,14 @@ public abstract class Base {
         this.age = age;
     }
 
+    public String getEmail(){
+        return email;
+    }
+
+    public void setEmail(String email){
+        this.email = email;
+    }
+
     public int getYearOfBirth(){
         return yearOfBirth;
     }
@@ -75,6 +88,7 @@ public abstract class Base {
                 ", dateJoined=" + dateJoined +
                 ", age=" + age +
                 ", yearOfBirth=" + yearOfBirth +
+                ", email='" + email + '\'' +
                 '}';
     }
 }

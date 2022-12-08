@@ -6,12 +6,10 @@ import java.util.ArrayList;
 
 public class Student extends Base{
 
-
     public ArrayList<Course> courses = new ArrayList<>();
 
-    public Student(String name, int identityNum, int dateJoined) {
-        super(name, identityNum, dateJoined);
+
+    public Student(String name, int identityNum, String email, int dateJoined) {
+        super(name, identityNum, email, dateJoined);
     }
-
-
 }
