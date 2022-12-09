@@ -4,6 +4,11 @@ import enumeration.Course;
 import implementationServices.PrincipalImplementation;
 import implementationServices.StudentImplementation;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
 public class Main {
     public static void main(String[] args) {
 //        LocalDate.now();
@@ -30,10 +35,16 @@ public class Main {
 
         Student student = new Student("Best",2,"esther@example.com", 12);
         StudentImplementation implemented = new StudentImplementation();
+        implemented.canReadFromAFile("" , Course.class);
         implemented.canTakeACourse(Course.BCH_412, student);
         implemented.canTakeACourse(Course.BCH_412, student);
 
-
+       try {
+           BufferedReader studentReader = new BufferedReader(new FileReader("StudentDataFile"));
+       }
+       catch (FileNotFoundException e){
+           e.fillInStackTrace();
+       }
 
     }
 }
