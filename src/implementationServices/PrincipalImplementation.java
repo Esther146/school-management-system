@@ -1,6 +1,6 @@
-package implementation_services;
+package implementationServices;
 
-import interface_service.PrincipalInterface;
+import interfaceService.PrincipalService;
 import model.Applicant;
 import model.Principal;
 import model.Student;
@@ -8,7 +8,7 @@ import model.Student;
 import java.time.LocalDate;
 import java.util.Random;
 
-public class PrincipalImplementation implements PrincipalInterface {
+public class PrincipalImplementation implements PrincipalService {
 
     @Override
     public Student admitAStudent(Applicant applicant) {

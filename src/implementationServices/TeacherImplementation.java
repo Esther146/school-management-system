@@ -1,10 +1,10 @@
-package implementation_services;
+package implementationServices;
 
 import enumeration.Course;
-import interface_service.TeacherInterface;
+import interfaceService.TeacherService;
 import model.Teacher;
 
-public class TeacherImplementation implements TeacherInterface {
+public class TeacherImplementation implements TeacherService {
     @Override
     public void canTeachACourse(Course course , Teacher teacher) {
         if (getCourseIndexInTheListOfCourses(course, teacher) > -1){

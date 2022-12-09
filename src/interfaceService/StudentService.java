@@ -1,9 +1,8 @@
-package interface_service;
+package interfaceService;
 
 import enumeration.Course;
-import enumeration.Level;
 import model.Student;
 
-public interface StudentInterface {
+public interface StudentService {
     void canTakeACourse(Course course, Student student);
 }

@@ -1,8 +1,8 @@
-package interface_service;
+package interfaceService;
 
 import enumeration.Course;
 import model.Teacher;
 
-public interface TeacherInterface {
+public interface TeacherService {
     void canTeachACourse(Course course , Teacher teacher);
 }

@@ -1,11 +1,8 @@
 package model;
 
 import enumeration.Course;
-import implementation_services.PrincipalImplementation;
-import implementation_services.StudentImplementation;
-import implementation_services.TeacherImplementation;
-
-import java.time.LocalDate;
+import implementationServices.PrincipalImplementation;
+import implementationServices.StudentImplementation;
 
 public class Main {
     public static void main(String[] args) {
@@ -35,6 +32,8 @@ public class Main {
         StudentImplementation implemented = new StudentImplementation();
         implemented.canTakeACourse(Course.BCH_412, student);
         implemented.canTakeACourse(Course.BCH_412, student);
+
+
 
     }
 }

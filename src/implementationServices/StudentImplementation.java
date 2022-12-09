@@ -1,12 +1,11 @@
-package implementation_services;
+package implementationServices;
 
 import enumeration.Course;
-import enumeration.Level;
-import interface_service.StudentInterface;
+import interfaceService.StudentService;
 import model.Principal;
 import model.Student;
 
-public class StudentImplementation implements StudentInterface {
+public class StudentImplementation implements StudentService {
 
     @Override
     public void canTakeACourse(Course course, Student student) {

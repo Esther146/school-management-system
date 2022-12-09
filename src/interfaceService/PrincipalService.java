@@ -1,9 +1,9 @@
-package interface_service;
+package interfaceService;
 
 import model.Applicant;
 import model.Student;
 
-public interface PrincipalInterface {
+public interface PrincipalService {
     Student admitAStudent(Applicant applicant);
 
     void expelAStudent(String studentName);
