@@ -16,7 +16,7 @@ public class PrincipalImplementation implements PrincipalService {
         Random random = new Random();
       if (!checkApplicantEmail(applicant.getEmail())){
           if (applicant.getAge() >= 18 ){
-              student = new Student(applicant.getName(), random.nextInt(), applicant.getEmail(), LocalDate.now().getYear());
+              student = new Student(applicant.getName(), random.nextInt(), applicant.getEmail(), "2012");
               Principal.students.add(student);
               System.out.println(applicant.getName() + " has been Admitted to the school");
           }else {

@@ -34,30 +34,6 @@ public class StudentImplementation implements StudentService {
         return false;
     }
 
-    public ArrayList<Object> canReadFromAFile(String filePath , Object object){
-      //  String filePath = "StudentDataFile.csv";
-        ArrayList<Object> arrayList = new ArrayList<>();
-        String fileLine = " ";
-      try {
-          BufferedReader studentReader = new BufferedReader(new FileReader(filePath));
-          while((fileLine = studentReader.readLine()) != null){
-              String[]  arrayValues = fileLine.split(",");
-              System.out.println(fileLine);
-              if (object instanceof  Student){
-                object  = new Student(arrayValues[0] , , arrayValues[2]);
-                  arrayList.add(object);
-              } else if (object instanceof Teacher ) {
-                  object = new Teacher(arrayValues[0], , arrayValues[2]);
-                  arrayList.add(object);
-              } else if (object instanceof Course){
-                  arrayList.add(object);
-              }
-          }
-      }
-      catch (IOException e){
-          e.printStackTrace();
-      }
 
-      return  arrayList;
-    }
+
 }

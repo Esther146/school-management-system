@@ -3,7 +3,7 @@ package model;
 public abstract class Base {
     private String name;
     private int identityNum;
-    private int dateJoined;
+    private String dateJoined;
     private double age;
     private int yearOfBirth;
 
@@ -25,11 +25,15 @@ public abstract class Base {
         this.yearOfBirth = yearOfBirth;
     }
 
-    public Base(String name, int identityNum, String email, int dateJoined) {
+    public Base(String name, int identityNum, String email, String dateJoined) {
         this.name = name;
         this.identityNum = identityNum;
         this.dateJoined = dateJoined;
         this.email = email;
+    }
+
+    public Base() {
+
     }
 
     public  String getName() {
@@ -48,11 +52,11 @@ public abstract class Base {
         this.identityNum = identityNum;
     }
 
-    public int getDateJoined() {
+    public String getDateJoined() {
         return dateJoined;
     }
 
-    public void setDateJoined(int dateJoined) {
+    public void setDateJoined(String dateJoined) {
         this.dateJoined = dateJoined;
     }
 

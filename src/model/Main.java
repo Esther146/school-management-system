@@ -3,11 +3,13 @@ package model;
 import enumeration.Course;
 import implementationServices.PrincipalImplementation;
 import implementationServices.StudentImplementation;
+import utility.ReaderFile;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,11 +35,20 @@ public class Main {
 //
 //
 
-        Student student = new Student("Best",2,"esther@example.com", 12);
-        StudentImplementation implemented = new StudentImplementation();
-        implemented.canReadFromAFile("" , Course.class);
-        implemented.canTakeACourse(Course.BCH_412, student);
-        implemented.canTakeACourse(Course.BCH_412, student);
+        Student student = new Student();
+        Teacher teacher = new Teacher();
+        ReaderFile  readerFile = new ReaderFile();
+         ArrayList<Object> studentArrayList =  readerFile.canReadFromAFile("src/utility/StudentDataFile.csv" , student);
+         ArrayList<Object> teachersList =  readerFile.canReadFromAFile("src/utility/TeacherDataFile.csv" , teacher);
+
+
+//       for (Object student1 : studentArrayList){
+//           System.out.println("Got here");
+//           System.out.println(student1.toString());
+//       }
+//        implemented.canReadFromAFile("src/utility/StudentDataFile.csv" , Teacher.class);
+//        implemented.canTakeACourse(Course.BCH_412, student);
+//        implemented.canTakeACourse(Course.BCH_412, student);
 
        try {
            BufferedReader studentReader = new BufferedReader(new FileReader("StudentDataFile"));
